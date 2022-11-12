@@ -86,7 +86,11 @@ jobs:
         run: |
          docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
+<<<<<<< HEAD
       - name: Stop and remove sensor container if running
+=======
+     - name: Stop and remove sensor container if running
+>>>>>>> c1b19c0b037de4b27e6e7d74174ac298edd00d71
         run: |
          docker ps -q --filter "name=sensor" | grep -q . && docker stop sensor && docker rm -fv sensor
        
